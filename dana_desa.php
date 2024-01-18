@@ -76,7 +76,7 @@ if(!isset($_SESSION['sid'])){
                     <th scope="col">No</th>
                     <th scope="col">Pendapatan</th>
                     <th scope="col">Anggaran</th>
-                    <th scope="col">Realisasi</th>
+                    <th scope="col">Tanggal</th>
                     <th scope="col">Lebih/Kurang</th>
                     <th scope="col">Action</th>
                 </tr>
@@ -97,7 +97,7 @@ if(!isset($_SESSION['sid'])){
                                 <th scope="row"><?php echo $nomor++ ?></th>
                                 <td><?php echo $data['pendapatan'] ?></td>
                                 <td><?php echo $data['anggaran'] ?></td>
-                                <td><?php echo $data['realisasi'] ?></td>
+                                <td><?php echo $data['tanggal'] ?></td>
                                 <td><?php echo $data['lebihkurang'] ?></td>
                                     <!-- Modal -->
                                     <div class="modal fade modal-lg" id="exampleModal<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -122,9 +122,9 @@ if(!isset($_SESSION['sid'])){
                                         </div>
                                         <hr>
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label"><b>Realisasi</b></label>
+                                            <label for="exampleInputEmail1" class="form-label"><b>Tanggal</b></label>
                                             <br>
-                                            <span class="fs-3"><?php echo $data['realisasi'] ?></span>
+                                            <span class="fs-3"><?php echo $data['tanggal'] ?></span>
                                         </div>
                                         <hr>
                                         <div class="mb-3">
@@ -172,8 +172,8 @@ if(!isset($_SESSION['sid'])){
                     <th>Kode Rek</th>
                     <th>Pendapatan</th>
                     <th>Jumlah(Anggaran)</th>
-                    <th>Realisasi</th>
-                    <th>Kurasng/Lebih</th>
+                    <th>Tanggal</th>
+                    <th>Lebih/Kurang</th>
                     <th>Aksi</th>
                   </tr>
                   </tfoot>
