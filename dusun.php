@@ -46,12 +46,12 @@ if(!isset($_SESSION['sid'])){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Jurusan</h1>
+            <h1>Data Dusun</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-              <li class="breadcrumb-item active">Data Jurusan</li>
+              <li class="breadcrumb-item active">Data Dusun</li>
             </ol>
           </div>
         </div>
@@ -66,7 +66,7 @@ if(!isset($_SESSION['sid'])){
 
       <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
+                <h3 class="card-title">DataTable Dusun</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -160,8 +160,8 @@ if(!isset($_SESSION['sid'])){
                   <tfoot>
                   <tr>
                     <th>No</th>
-                    <th>Kode</th>
-                    <th>Platform(Jurusan)</th>
+                    <th>Dusun</th>
+                    <th>PlatJumlahform(KK)</th>
                     <th>Aksi</th>
                   </tr>
                   </tfoot>
