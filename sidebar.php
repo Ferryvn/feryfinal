@@ -30,15 +30,23 @@
             </a>
           <li class="nav-item">
             <a href="dana_desa.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-table"></i>
               <p>
                 Dana Desa
               </p>
             </a>
           </li>
           <li class="nav-item">
+            <a href="belanja.php" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Belanja
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="dusun.php" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon fas fa-table"></i>
               <p>
                 Dusun
               </p>
