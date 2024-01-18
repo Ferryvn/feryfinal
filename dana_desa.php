@@ -46,7 +46,7 @@ if(!isset($_SESSION['sid'])){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Dana Desa</h1>
+            <h1>Rantau Selamat</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -62,12 +62,13 @@ if(!isset($_SESSION['sid'])){
     <section class="content">
 
       <!-- Default box -->
-
-
       <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable Dana Desa</h3>
-              </div>
+                <h2 class="card-title">Data Dana Desa</h2>
+        <div class="float-sm-right">
+          <a class="btn btn-outline-dark mb-1" href="form_dana.php">Tambah Data </a>
+      </div>
+      </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
