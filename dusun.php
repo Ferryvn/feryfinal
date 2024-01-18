@@ -74,8 +74,8 @@ if(!isset($_SESSION['sid'])){
                   <thead>
                 <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Kode</th>
-                    <th scope="col">Jurusan</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Jumlah KK</th>
                     <th scope="col">Action</th>
                 </tr>
                   </thead>
@@ -84,7 +84,7 @@ if(!isset($_SESSION['sid'])){
                             //1. membuat koneksi
                             include_once("koneksi.php");
                             //2. membuat query untuk menampilkan seluruh data
-                            $qry = "SELECT * FROM jurusan";
+                            $qry = "SELECT * FROM dusun";
                             //3. menjalankan query
                             $tampil = mysqli_query($con,$qry);
                             //4. menampilkan data menggunakan looping foreach
@@ -93,8 +93,8 @@ if(!isset($_SESSION['sid'])){
                             ?>
                             <tr>
                                 <th scope="row"><?php echo $nomor++ ?></th>
-                                <td><?php echo $data['kode'] ?></td>
-                                <td><?php echo $data['jurusan'] ?></td>
+                                <td><?php echo $data['nama'] ?></td>
+                                <td><?php echo $data['jmlhkk'] ?></td>
                                     <!-- Modal -->
                                     <div class="modal fade modal-lg" id="exampleModal<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -118,44 +118,9 @@ if(!isset($_SESSION['sid'])){
                                         </div>
                                         <hr>
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label"><b>Jenis Kelamin</b></label>
+                                            <label for="exampleInputEmail1" class="form-label"><b>Jumlah KK</b></label>
                                             <br>
-                                            <span class="fs-3"><?php echo $data['jk'] ?></span>
-                                        </div>
-                                        <hr>
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label"><b>Jurusan</b></label>
-                                            <br>
-                                            <span class="fs-3"><?php echo $data['jurusan'] ?></span>
-                                        </div>
-                                        <hr>
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label"><b>Kelas</b></label>
-                                            <br>
-                                            <span class="fs-3"><?php echo $data['kelas'] ?></span>
-                                        </div>
-                                        <hr>
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label"><b>Tempat, Tanggal Lahir</b></label>
-                                            <br>
-                                            <?php
-                                                $tgl = date_create($data['tanggal']);
-                                                $tanggal = date_format($tgl,"d F Y");
-                                            ?>
-                                            <span class="fs-3"><?php echo $data['tempat'] ?>, <?php echo $tanggal ?></span>
-                                        </div>
-                                        <hr>
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label"><b>Alamatr</b></label>
-                                            <br>
-                                            <span class="fs-3"><?php echo $data['alamat'] ?></span>
-                                        </div>
-                                        <hr>
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label"><b>Email</b></label>
-                                            <br>
-                                            <span class="fs-3"><?php echo $data['email'] ?></span>
-                                        </div> 
+                                            <span class="fs-3"><?php echo $data['jmlhkk'] ?></span>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

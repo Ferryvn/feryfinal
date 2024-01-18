@@ -13,7 +13,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Fery Ferdiansyah</a>
+          <a href="#" class="d-block">Rantau Selamat</a>
         </div>
       </div>
       <!-- Sidebar Menu -->
@@ -29,18 +29,18 @@
               </p>
             </a>
           <li class="nav-item">
-            <a href="mahasiswa.php" class="nav-link">
+            <a href="dana_desa.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Mahasiswa
+                Dana Desa
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="jurusan.php" class="nav-link">
+            <a href="dusun.php" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Jurusan
+                Dusun
               </p>
             </a>
         </ul>
