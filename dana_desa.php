@@ -64,7 +64,7 @@ if(!isset($_SESSION['sid'])){
       <!-- Default box -->
       <div class="card">
               <div class="card-header">
-                <h2 class="card-title">Data Dana Desa</h2>
+                <h2 class="card-title">Data Anggaran Dana Desa</h2>
         <div class="float-sm-right">
           <a class="btn btn-outline-dark mb-1" href="form_dana.php">Tambah Data </a>
       </div>
