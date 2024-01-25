@@ -45,13 +45,19 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="rancangan.php" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Rancangan
+              </p>
+            </a>
+          <li class="nav-item">
             <a href="dusun.php" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 Dusun
               </p>
             </a>
-        </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
