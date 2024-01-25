@@ -74,7 +74,7 @@ if(!isset($_SESSION['sid'])){
     
       <form>
                 <div class="card-body">
-                <form action="proses_jurusan.php" method="POST">
+                <form action="proses_belanja.php" method="POST">
                   <div class="form-group">
                     <label for="exampleInputnama">Nama</label>
                     <input type="nama" name="nama" class="form-control" id="exampleInputnama" placeholder="input nama">
