@@ -76,12 +76,22 @@ if(!isset($_SESSION['sid'])){
                 <div class="card-body">
                 <form action="proses_dana.php" method="POST">
                   <div class="form-group">
-                    <label for="exampleInputnama">Nama</label>
+                    <label for="exampleInputnama">Pendapatan</label>
                     <input type="nama" name="nama" class="form-control" id="exampleInputnama" placeholder="input nama">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputjmlhkk">Jumlah KK</label>
-                    <input type="jmlhkk" name="jmlhkk" class="form-control" id="exampleInputjmlhkk" placeholder="input kk">
+                    <label for="exampleInputanggaran">Anggaran</label>
+                    <input type="anggaran" name="anggaran" class="form-control" id="exampleInputanggaran" placeholder="input anggaran">
+                  </div>
+                  <div class="form-group">
+                  <div class="mb-3">
+                <label for="exampleInputtanggal" class="form-label">Tanggal</label>
+                <input type="date" name="tanggal" class="form-control" id="exampleInputtanggal">
+            </div>
+                </div>
+                  <div class="form-group">
+                    <label for="exampleInputjmlhkk">Anggaran</label>
+                    <input type="anggaran" name="anggaran" class="form-control" id="exampleInputanggaran" placeholder="input anggaran">
                   </div>
                   <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -113,10 +123,14 @@ if(!isset($_SESSION['sid'])){
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap4 Duallistbox -->
+<script src="plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+<!-- date-range-picker -->
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
 </body>
 </html>
