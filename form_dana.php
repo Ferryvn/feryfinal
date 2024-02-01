@@ -72,40 +72,33 @@ if(!isset($_SESSION['sid'])){
               <!-- /.card-header -->
               <!-- form start -->
     
-      <form>
-                <div class="card-body">
-                <form action="proses_dana.php" method="POST">
-                  <div class="form-group">
-                    <label for="exampleInputnama">Pendapatan</label>
-                    <input type="nama" name="nama" class="form-control" id="exampleInputnama" placeholder="input nama">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputanggaran">Anggaran</label>
-                    <input type="anggaran" name="anggaran" class="form-control" id="exampleInputanggaran" placeholder="input anggaran">
-                  </div>
-                  <div class="form-group">
-                  <div class="mb-3">
-                <label for="exampleInputtanggal" class="form-label">Tanggal</label>
-                <input type="date" name="tanggal" class="form-control" id="exampleInputtanggal">
+        <div class="card-body">
+        <form action="proses_dana.php" method="POST">
+            <div class="mb-3">
+                <label for="pendapatan" class="form-label">Pendapatan</label>
+                <input type="text" name="pendapatan" class="form-control" id="pendapatan" aria-describedby="emailHelp">
             </div>
-                </div>
-                  <div class="form-group">
-                    <label for="exampleInputjmlhkk">Anggaran</label>
-                    <input type="anggaran" name="anggaran" class="form-control" id="exampleInputanggaran" placeholder="input anggaran">
-                  </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  </div>
-                  </form>
-                </div>
-                <!-- /.card-body -->
 
-                <div class="card-footer">
-                <button type="proses" class="btn btn-primary">Proses Data</button>
-                <a class="btn btn-secondary" href="dusun.php">Batal </a>
-                </div>
-              </form>
+            <div class="mb-3">
+                <label for="anggaran" class="form-label">Anggaran</label>
+                <input type="text" name="anggaran" class="form-control" id="anggaran" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="tanggal" class="form-label">tanggal</label>
+                <input type="date" name="tanggal" class="form-control" id="tanggal" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="lebihkurang" class="form-label">Lebih Kurang</label>
+                <input type="text" name="lebihkurang" class="form-control" id="lebihkurang" aria-describedby="emailHelp">
+            </div>
+
+            <button type="proses" class="btn btn-primary">Proses Data</button>
+            <a class="btn btn-secondary" href="dana_desa.php">Batal </a>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
 
     </section>
     <!-- /.content -->

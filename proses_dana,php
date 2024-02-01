@@ -4,14 +4,14 @@ include_once("koneksi.php");
 
 
 // 2, mengambil seluruh nilai input dan dimasukkan ke variabel
-$pendapatan         = $_POST['nama'];
+$pendapatan         = $_POST['pendapatan'];
 $anggaran           = $_POST['anggaran'];
 $tanggal            = $_POST['tanggal'];
-$lebihkurang        = $_POST['lebih_kurang'];
+$lebihkurang        = $_POST['lebihkurang'];
 
 
 // 3. membuat query insert 
-$qry = "INSERT INTO dana (n,nama,anggaran,tanggal,lebih_kurang) VALUES 
+$qry = "INSERT INTO dana (pendapatan,anggaran,tanggal,lebihkurang) VALUES 
 ('$pendapatan','$anggaran','$tanggal','$lebihkurang')";
 
 
