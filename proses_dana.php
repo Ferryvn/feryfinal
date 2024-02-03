@@ -4,15 +4,15 @@ include_once("koneksi.php");
 
 
 // 2, mengambil seluruh nilai input dan dimasukkan ke variabel
-$pendapatan         = $_POST['pendapatan'];
+$nama         = $_POST['nama'];
 $anggaran           = $_POST['anggaran'];
 $tanggal            = $_POST['tanggal'];
-$lebihkurang        = $_POST['lebihkurang'];
+$sisa        = $_POST['sisa'];
 
 
 // 3. membuat query insert 
-$qry = "INSERT INTO dana (pendapatan,anggaran,tanggal,lebihkurang) VALUES 
-('$pendapatan','$anggaran','$tanggal','$lebihkurang')";
+$qry = "INSERT INTO dana (nama,anggaran,tanggal,sisa) VALUES 
+('$nama','$anggaran','$tanggal','$sisa')";
 
 
 // 4. menjalankan query
@@ -22,5 +22,5 @@ $simpan = mysqli_query($con,$qry);
 // 5. alihkan ke halaman index.php
 ?>
 <script>
-    document.location="index.php";
+    document.location="dana_desa.php";
 </script>

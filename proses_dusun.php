@@ -9,7 +9,7 @@ $jmlhkk            = $_POST['jmlhkk'];
 
 
 // 3. membuat query insert 
-$qry = "INSERT INTO jurusan (nama,jmlhkk) VALUES ('$nama','$jmlhkk')";
+$qry = "INSERT INTO dusun (nama,jmlhkk) VALUES ('$nama','$jmlhkk')";
 
 
 // 4. menjalankan query
