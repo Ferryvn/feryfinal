@@ -2,57 +2,63 @@
 session_start();
 $pesan = "";
 
-
 if(isset($_POST['tombol'])){
+    //1. koneksi dulu ke database
+    include_once("koneksi.php");
 
-  include_once("koneksi.php");
-
+    //2. mengambil nilai dari input
     $email = $_POST['email'];
     $password = md5($_POST['password']);
 
-    $qry = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+    //3. menulis query
+    $qry = "SELECT * FROM users WHERE email='$email' 
+    AND password='$password'";
 
-
+    //4. jalankan query
     $result = mysqli_query($con,$qry);
 
+    //5. menghitung jumlah hasil query
     $hitung = mysqli_num_rows($result);
 
-    if($hitung > 0 ){
-      //proses login
+    if($hitung > 0){
+        //proses login
 
-      //mengambil seluruh data    
-      $data = mysqli_fetch_array($result);    
-      $id = $data['id'];
-      $nama = $data['nama'];
+        //1. mengambil seluruh data login
+        $data = mysqli_fetch_array($result);
+        $id = $data['id'];
+        $nama = $data['nama'];
 
-      //pembuatan session
-      $_SESSION['sid'] = $id;
-      $_SESSION['snama'] = $nama;
-      $_SESSION['semail'] = $email;
+        if($_POST['ingat'] == "yes"){
+          //pembuatan cookie
+          setcookie("cid",$id, time() + (60*60*24*3), "/");
+          setcookie("cnama",$nama, time() + (60*60*24*3), "/");
+          setcookie("cemail",$email, time() + (60*60*24*3), "/");
+        }else{
+          //pembuatan session
+          $_SESSION['sid'] = $id;
+          $_SESSION['snama'] = $nama;
+          $_SESSION['semail'] = $email;
+        }
+        
 
-      //update last log
-      $qry_update = "UPDATE users SET last_kog='now()'
-      WHERE id='$id'";
-      $res_update = mysqli_query($con,$qry_update);
+        //update last log
+        $qry_update = "UPDATE users SET last_log=now() 
+        WHERE id='$id'";
+        $res_update = mysqli_query($con, $qry_update);
 
-      //pengalihan ke halaman index
-      
-      ?>
-      <script>
-        document.location="index.php";
-      </script>
-      <?php
+        //pengalihan ke halaman index
+        ?>
+        <script>
+            document.location="index.php";
+        </script>
+        <?php
     }else{
         $pesan = '<div class="alert alert-danger" role="alert">
-                Login tidak Valid!
-                </div>';
+        Login Tidak Valid!.
+        </div>';
     }
-  }
-
+}
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,14 +78,12 @@ if(isset($_POST['tombol'])){
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="index2.html"><b>Admin</b>LTE</a>
+    <a href="../../index2.html"><b>Admin</b>LTE</a>
   </div>
   <!-- /.login-logo -->
-      
-<?php
-echo $pesan;
-?>
-
+  <?php
+    echo $pesan;
+  ?>
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
@@ -104,7 +108,7 @@ echo $pesan;
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
-              <input type="checkbox" id="remember">
+              <input type="checkbox" id="remember" name="ingat" value="yes">
               <label for="remember">
                 Remember Me
               </label>
@@ -112,18 +116,13 @@ echo $pesan;
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" name='tombol' class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" name="tombol" class="btn btn-primary btn-block">Sign In</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
 
-      <p class="mb-1">
-        <a href="forgot-password.html">I forgot my password</a>
-      </p>
-      <p class="mb-0">
-        <a href="register.html" class="text-center">Register a new membership</a>
-      </p>
+      
     </div>
     <!-- /.login-card-body -->
   </div>
@@ -131,10 +130,10 @@ echo $pesan;
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
 </body>
 </html>
