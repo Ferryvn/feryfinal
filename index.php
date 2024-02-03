@@ -69,12 +69,12 @@ if(!isset($_SESSION['sid'])){
               <div class="inner">
                 <h3><?php echo $dan ?></h3>
 
-                <p>New Orders</p>
+                <p>Dana Masuk</p>
               </div>
               <div class="icon">
-                <i class="ion ion-coin"></i>
+                <i class="ion ion-pie-graph"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="dana_desa.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -84,12 +84,12 @@ if(!isset($_SESSION['sid'])){
               <div class="inner">
                 <h3><?php echo $bel ?></h3>
 
-                <p>Bounce Rate</p>
+                <p>Jumlah Belanja</p>
               </div>
               <div class="icon">
-                <i class="data"></i>
+                <i class="ion ion-bag"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="belanja.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -97,14 +97,14 @@ if(!isset($_SESSION['sid'])){
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+                <h3><?php echo $dus?></h3>
 
-                <p>User Registrations</p>
+                <p>jumlah Dusun</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="dusun.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -112,14 +112,14 @@ if(!isset($_SESSION['sid'])){
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>65</h3>
+                <h3><?php echo $ran ?></h3>
 
                 <p>Unique Visitors</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="rancangan.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

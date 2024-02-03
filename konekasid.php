@@ -18,7 +18,7 @@
             ?>
 <?php
             include_once("koneksi.php");
-            $sql_dan = "SELECT * FROM dana";
+            $sql_dan = "SELECT * FROM dusun";
             $result_dan = mysqli_query($con,$sql_dan);
-            $dan = mysqli_num_rows($result_dan)
+            $dus = mysqli_num_rows($result_dan)
             ?>

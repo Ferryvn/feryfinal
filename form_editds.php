@@ -1,10 +1,10 @@
 <?php
 include_once("koneksi.php");
 $id = $_GET['id'];
-$qry = "SELECT * FROM dana WHERE id='$id'";
+$qry = "SELECT * FROM dusun WHERE id='$id'";
 $data = mysqli_query($con,$qry);
 
-$dn = mysqli_fetch_array($data);
+$bl = mysqli_fetch_array($data);
 ?>
 
 <!DOCTYPE html>
@@ -69,30 +69,19 @@ $dn = mysqli_fetch_array($data);
               <!-- form start -->
     
               <div class="card-body">
-        <form action="proses_editd.php" method="POST">
-        <input type="hidden" name="id" value="<?php echo $dn['id'] ?>">
+        <form action="proses_editds.php" method="POST">
+        <input type="hidden" name="id" value="<?php echo $bl['id'] ?>">
             <div class="mb-3">
                 <label for="exampleInputnama" class="form-label">Pendapatan</label>
-                <input type="nama" value="<?php echo $dn['nama'] ?>" name="nama" class="form-control" id="exampleInputnama">
+                <input type="nama" value="<?php echo $bl['nama'] ?>" name="nama" class="form-control" id="exampleInputnama">
             </div>
-
             <div class="mb-3">
-                <label for="exampleInputanggaran" class="form-label">Anggaran</label>
-                <input type="text" value="<?php echo $dn['anggaran'] ?>" name="anggaran" class="form-control" id="exampleInputanggaran">
-            </div>
-
-            <div class="mb-3">
-                <label for="exampleInputtgl" class="form-label">Tanggal</label>
-                <input type="date" value="<?php echo $dn['tanggal'] ?>" name="tanggal" class="form-control" id="exampleInputtgl">
-            </div>
-
-            <div class="mb-3">
-                <label for="exampleInputsisa" class="form-label">Kurang/Lebih</label>
-                <input type="text" value="<?php echo $dn['sisa'] ?>" name="sisa" class="form-control" id="exampleInputsisa">
+                <label for="exampleInputsisa" class="form-label">Jumlah KK</label>
+                <input type="text" value="<?php echo $bl['jmlhkk'] ?>" name="jmlhkk" class="form-control" id="exampleInputsisa">
             </div>
 
             <button type="proses" class="btn btn-primary">Proses Data</button>
-            <a class="btn btn-secondary" href="dana.php">Batal </a>
+            <a class="btn btn-secondary" href="dusun.php">Batal </a>
             </form>
             </div>
             </div>

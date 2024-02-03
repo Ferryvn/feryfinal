@@ -121,7 +121,7 @@ if(!isset($_SESSION['sid'])){
                                 </div>
                               </div>
                               </div>
-                              div>
+                            
                               </tr>
                             <?php
                             }
