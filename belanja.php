@@ -96,10 +96,10 @@ if(!isset($_SESSION['sid'])){
                             ?>
                             <tr>
                                 <th scope="row"><?php echo $nomor++ ?></th>
-                                <td><?php echo $data['Nama'] ?></td>
-                                <td><?php echo $data['Anggaran'] ?></td>
+                                <td><?php echo $data['nama'] ?></td>
+                                <td><?php echo $data['anggaran'] ?></td>
                                 <td><?php echo $data['tanggal'] ?></td>
-                                <td><?php echo $data['kuranglebih'] ?></td>
+                                <td><?php echo $data['sisa'] ?></td>
                                     <!-- Modal -->
                                     <div class="modal fade modal-lg" id="exampleModal<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -113,13 +113,13 @@ if(!isset($_SESSION['sid'])){
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label"><b>Nama</b></label>
                                             <br>
-                                            <span class="fs-3"><?php echo $data['Nama'] ?></span>
+                                            <span class="fs-3"><?php echo $data['nama'] ?></span>
                                         </div>
                                         <hr>
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label"><b>Anggaran</b></label>
                                             <br>
-                                            <span class="fs-3"><?php echo $data['Anggaran'] ?></span>
+                                            <span class="fs-3"><?php echo $data['anggaran'] ?></span>
                                         </div>
                                         <hr>
                                         <div class="mb-3">
@@ -131,7 +131,7 @@ if(!isset($_SESSION['sid'])){
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label"><b>Lebih/Kurang</b></label>
                                             <br>
-                                            <span class="fs-3"><?php echo $data['kuranglebih'] ?></span>
+                                            <span class="fs-3"><?php echo $data['sisa'] ?></span>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -141,7 +141,7 @@ if(!isset($_SESSION['sid'])){
                                     </div>
                                     </div>
                                 <td>
-                                    <a href="form_edit.php?id=<?php echo $data['id'] ?>" class="btn btn-sm btn-info"><i class="fa fa-pencil-alt"></i></a>
+                                    <a href="form_editb.php?id=<?php echo $data['id'] ?>" class="btn btn-sm btn-info"><i class="fa fa-pencil-alt"></i></a>
                                     <button type="button" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $data['id'] ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                                     <!-- Modal -->
                                     <div class="modal fade" id="hapus<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

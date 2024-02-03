@@ -1,16 +1,3 @@
-<?php
-session_start();
-if(!isset($_SESSION['sid'])){
-  ?>
-  <script>
-    document.location="login.php";
-  </script>
-  <?php
-}
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,14 +40,21 @@ if(!isset($_SESSION['sid'])){
         </div>
       </div><!-- /.container-fluid -->
     </section>
-    <div class="container">
-    <div class="row">
-        <div class="col-md-8 m-auto mt-5">
-            <div class="card">
-            <div class="card-header">
-        Dusun
-        <br>
-        </div>
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+          <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-10 m-auto mt-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Input Data Dusun</h3>
+              </div>
         <div class="card-body">
         <form action="proses_dusun.php" method="POST">
             <div class="mb-3">
@@ -70,7 +64,7 @@ if(!isset($_SESSION['sid'])){
 
             <div class="mb-3">
                 <label for="exampleInputjmlhkk" class="form-label">Jumlah KK</label>
-                <input type="jmlhkk" name="jmlhkk" class="form-control" id="exampleInputjmlhkk">
+                <input type="number" name="jmlhkk" class="form-control" id="exampleInputjmlhkk">
             </div>
 
             <button type="proses" class="btn btn-primary">Proses Data</button>
@@ -79,6 +73,7 @@ if(!isset($_SESSION['sid'])){
             </div>
             </div>
         </div>
+      </div>
     </div>
 </div>
     <!-- /.content -->

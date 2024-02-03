@@ -1,16 +1,3 @@
-<?php
-session_start();
-if(!isset($_SESSION['sid'])){
-  ?>
-  <script>
-    document.location="login.php";
-  </script>
-  <?php
-}
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,35 +54,41 @@ if(!isset($_SESSION['sid'])){
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Keterangan Dusun</h3>
+                <h3 class="card-title">Input Data Dana</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
     
-      <form>
-                <div class="card-body">
-                <form action="proses_belanja.php" method="POST">
-                  <div class="form-group">
-                    <label for="exampleInputnama">Nama</label>
-                    <input type="nama" name="nama" class="form-control" id="exampleInputnama" placeholder="input nama">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputjmlhkk">Jumlah KK</label>
-                    <input type="jmlhkk" name="jmlhkk" class="form-control" id="exampleInputjmlhkk" placeholder="input kk">
-                  </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  </div>
-                  </form>
-                </div>
-                <!-- /.card-body -->
+              <div class="card-body">
+        <form action="proses_belanja.php" method="POST">
+            <div class="mb-3">
+                <label for="exampleInputnama" class="form-label">Belanja</label>
+                <input type="nama" name="nama" class="form-control" id="exampleInputnama">
+            </div>
 
-                <div class="card-footer">
-                <button type="proses" class="btn btn-primary">Proses Data</button>
-                <a class="btn btn-secondary" href="dusun.php">Batal </a>
-                </div>
-              </form>
+            <div class="mb-3">
+                <label for="exampleInputanggaran" class="form-label">Anggaran</label>
+                <input type="text" name="anggaran" class="form-control" id="exampleInputanggaran">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputtgl" class="form-label">Tanggal</label>
+                <input type="date" name="tanggal" class="form-control" id="exampleInputtgl">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputsisa" class="form-label">Kurang/Lebih</label>
+                <input type="text" name="sisa" class="form-control" id="exampleInputsisa">
+            </div>
+
+            <button type="proses" class="btn btn-primary">Proses Data</button>
+            <a class="btn btn-secondary" href="dana.php">Batal </a>
+            </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     </section>
     <!-- /.content -->
@@ -113,10 +106,14 @@ if(!isset($_SESSION['sid'])){
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap4 Duallistbox -->
+<script src="plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+<!-- date-range-picker -->
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
 </body>
 </html>

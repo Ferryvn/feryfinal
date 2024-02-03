@@ -1,16 +1,3 @@
-<?php
-session_start();
-if(!isset($_SESSION['sid'])){
-  ?>
-  <script>
-    document.location="login.php";
-  </script>
-  <?php
-}
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,34 +54,37 @@ if(!isset($_SESSION['sid'])){
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Keterangan Dusun</h3>
+                <h3 class="card-title">Input Data Dana</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
     
-        <div class="card-body">
+              <div class="card-body">
         <form action="proses_dana.php" method="POST">
             <div class="mb-3">
-                <label for="pendapatan" class="form-label">Pendapatan</label>
-                <input type="text" name="pendapatan" class="form-control" id="pendapatan" aria-describedby="emailHelp">
+                <label for="exampleInputnama" class="form-label">Pendapatan</label>
+                <input type="nama" name="nama" class="form-control" id="exampleInputnama">
             </div>
 
             <div class="mb-3">
-                <label for="anggaran" class="form-label">Anggaran</label>
-                <input type="text" name="anggaran" class="form-control" id="anggaran" aria-describedby="emailHelp">
+                <label for="exampleInputanggaran" class="form-label">Anggaran</label>
+                <input type="text" name="anggaran" class="form-control" id="exampleInputanggaran">
             </div>
+
             <div class="mb-3">
-                <label for="tanggal" class="form-label">tanggal</label>
-                <input type="date" name="tanggal" class="form-control" id="tanggal" aria-describedby="emailHelp">
+                <label for="exampleInputtgl" class="form-label">Tanggal</label>
+                <input type="date" name="tanggal" class="form-control" id="exampleInputtgl">
             </div>
+
             <div class="mb-3">
-                <label for="lebihkurang" class="form-label">Lebih Kurang</label>
-                <input type="text" name="lebihkurang" class="form-control" id="lebihkurang" aria-describedby="emailHelp">
+                <label for="exampleInputsisa" class="form-label">Kurang/Lebih</label>
+                <input type="text" name="sisa" class="form-control" id="exampleInputsisa">
             </div>
 
             <button type="proses" class="btn btn-primary">Proses Data</button>
-            <a class="btn btn-secondary" href="dana_desa.php">Batal </a>
+            <a class="btn btn-secondary" href="dana.php">Batal </a>
             </form>
+            </div>
             </div>
         </div>
     </div>

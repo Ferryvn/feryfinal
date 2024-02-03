@@ -94,75 +94,35 @@ if(!isset($_SESSION['sid'])){
                             $nomor = 1;
                             foreach($tampil as $data){
                             ?>
-                            <tr>
+                                <tr>
                                 <th scope="row"><?php echo $nomor++ ?></th>
-                                <td><?php echo $data['pendapatan'] ?></td>
+                                <td><?php echo $data['nama'] ?></td>
                                 <td><?php echo $data['anggaran'] ?></td>
                                 <td><?php echo $data['tanggal'] ?></td>
-                                <td><?php echo $data['lebihkurang'] ?></td>
-                                    <!-- Modal -->
-                                    <div class="modal fade modal-lg" id="exampleModal<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Data Detail <?php echo $data['nama'] ?></h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label"><b>Pendapatan</b></label>
-                                            <br>
-                                            <span class="fs-3"><?php echo $data['pendapatan'] ?></span>
-                                        </div>
-                                        <hr>
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label"><b>Anggaran</b></label>
-                                            <br>
-                                            <span class="fs-3"><?php echo $data['anggaran'] ?></span>
-                                        </div>
-                                        <hr>
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label"><b>Tanggal</b></label>
-                                            <br>
-                                            <span class="fs-3"><?php echo $data['tanggal'] ?></span>
-                                        </div>
-                                        <hr>
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label"><b>Lebih/Kurang</b></label>
-                                            <br>
-                                            <span class="fs-3"><?php echo $data['lebihkurang'] ?></span>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    </div>
+                                <td><?php echo $data['sisa'] ?></td>
+                                                        
                                 <td>
-                                    <a href="form_edit.php?id=<?php echo $data['id'] ?>" class="btn btn-sm btn-info"><i class="fa fa-pencil-alt"></i></a>
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $data['id'] ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="hapus<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Peringatan</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            Apakah Data Mahasiswa Dengan Nama <b><?php echo $data['nama'] ?></b> Ingin Dihapus?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                                            <a href="proses_hapus.php?id=<?php echo $data['id'] ?>" class="btn btn-danger">Ya</a>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </td>
-                            </tr>
+                                <a href="form_editd.php?id=<?php echo $data['id'] ?>" class="btn btn-sm btn-info"><i class="fa fa-solid fa-pen"></i></a>
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $data['id'] ?>" class="btn btn-sm btn-danger "><i class="fa fa-solid fa-trash"></i></button></td>
+                                <!-- Modal -->
+                                <div class="modal fade" id="hapus<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Menghapus Data</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  apa benar data jurusan <b><?php echo $data['nama']?></b> ingin dihapus?
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
+                                  <a href="proses_hapusd.php?id=<?php echo $data['id'] ?>" class="btn btn-danger">Ya</a>
+                                </div>
+                              </div>
+                              </div>
+                              div>
+                              </tr>
                             <?php
                             }
                             ?>
@@ -201,6 +161,7 @@ if(!isset($_SESSION['sid'])){
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -216,6 +177,7 @@ if(!isset($_SESSION['sid'])){
 <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->

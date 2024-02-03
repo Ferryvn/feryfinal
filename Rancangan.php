@@ -66,7 +66,7 @@ if(!isset($_SESSION['sid'])){
               <div class="card-header">
                 <h2 class="card-title">Data Pelaksanaan Pembangunan Desa</h2>
         <div class="float-sm-right">
-          <a class="btn btn-outline-dark mb-1" href="form_dana.php">Tambah Data </a>
+          <a class="btn btn-outline-dark mb-1" href="form_rancangan.php">Tambah Data </a>
       </div>
       </div>
               <!-- /.card-header -->
@@ -99,7 +99,7 @@ if(!isset($_SESSION['sid'])){
                                 <td><?php echo $data['nama'] ?></td>
                                 <td><?php echo $data['anggaran'] ?></td>
                                 <td><?php echo $data['tanggal'] ?></td>
-                                <td><?php echo $data['lebihkurang'] ?></td>
+                                <td><?php echo $data['sisa'] ?></td>
                                     <!-- Modal -->
                                     <div class="modal fade modal-lg" id="exampleModal<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -130,8 +130,8 @@ if(!isset($_SESSION['sid'])){
                                         <hr>
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label"><b>Lebih/Kurang</b></label>
-                                            <br>
-                                            <span class="fs-3"><?php echo $data['lebihkurang'] ?></span>
+                                            <br>u
+                                            <span class="fs-3"><?php echo $data['sisa'] ?></span>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
